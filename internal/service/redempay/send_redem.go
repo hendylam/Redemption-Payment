@@ -34,7 +34,6 @@ func (s *service) RedemptionPayment(ctx context.Context, parm *RedempPayData) (*
 
 	log.Println("Sending Data to gRPC Inquiry Confirm Subscribe ......")
 
-	// inquiryRequest := &mic.PaymentPoolId{grpcData.Paymentpoolid}
 	result, err := miClient.RedemptionPayment(ctx, &grpcData)
 	log.Println("connected ")
 	log.Println("a: ", result)
